@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="container">
+            <h1>Nichinan-Shintoku Store</h1>
+            <button class="hamburger" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">ホーム</a></li>
+                    <li><a href="{{ url_for('members') }}">社員一覧</a></li>
+                    <li><a href="{{ url_for('customers') }}">顧客一覧</a></li>
+                    <li><a href="{{ url_for('products') }}">製品一覧</a></li>
+                    <li><a href="{{ url_for('sales') }}">販売一覧</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025ソフトウェア活用 データベース管理システム</p>
+        </div>
+    </footer>
+</body>
+</html>

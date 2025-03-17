@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}社員一覧{% endblock %}
+
+{% block content %}
+<h2>社員一覧</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>名前</th>
+            <th>役職</th>
+            <th>メールアドレス</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for member in members %}
+        <tr>
+            <td>{{ member.id }}</td>
+            <td>{{ member.name }}</td>
+            <td>{{ member.position }}</td>
+            <td>{{ member.email }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

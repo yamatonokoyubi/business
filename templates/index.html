@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Top Page{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h2>データベース管理システム</h2>
+    <p>社員、顧客、製品、販売情報を簡単に管理できます。</p>
+</div>
+
+<div class="card-container">
+    <div class="card">
+        <a href="{{ url_for('members') }}">
+            <div class="card-icon">👤</div>
+            <div class="card-title">社員一覧</div>
+            <div class="card-description">社員情報を管理します。</div>
+        </a>
+    </div>
+    <div class="card">
+        <a href="{{ url_for('customers') }}">
+            <div class="card-icon">🏢</div>
+            <div class="card-title">顧客一覧</div>
+            <div class="card-description">顧客情報を管理します。</div>
+        </a>
+    </div>
+    <div class="card">
+        <a href="{{ url_for('products') }}">
+            <div class="card-icon">📦</div>
+            <div class="card-title">製品一覧</div>
+            <div class="card-description">製品情報を管理します。</div>
+        </a>
+    </div>
+    <div class="card">
+        <a href="{{ url_for('sales') }}">
+            <div class="card-icon">💰</div>
+            <div class="card-title">販売一覧</div>
+            <div class="card-description">販売情報を管理します。</div>
+        </a>
+    </div>
+</div>
+{% endblock %}
