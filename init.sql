@@ -62,6 +62,7 @@ INSERT INTO members (name, position, email) VALUES
 ('清原 翠', '営業担当', 'kiyohara@example.com'),
 ('佐々木 凛', '営業担当', 'sasaki@example.com'),
 ('野村 陽葵', 'マーケティング担当', 'nomura@example.com'),
+('竹林 鈴音', 'データサイエンス担当', 'takebayashi@example.com'),
 ('泊口 芽依', 'マーケティング担当', 'tomariguchi@example.com');
 
 -- 顧客テーブルにダミーデータを挿入
@@ -93,4 +94,5 @@ INSERT INTO sales (date, member_id, customer_id, product_id, quantity, status) V
 ('2025-03-11', 7, 5, 4, 8, '発送済み'),
 ('2025-03-12', 3, 2, 3, 8, 'キャンセル'),
 ('2025-03-15', 6, 1, 5, 3, '受注済み'),
-('2025-03-16', 2, 5, 2, 10, '発送済み');
+('2025-03-16', 2, 5, 2, 10, '発送済み'),
+('2025-03-16', 8, 1, 3, 5, '受注済み');
